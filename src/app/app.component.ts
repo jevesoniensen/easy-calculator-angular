@@ -9,5 +9,5 @@ import {NavItem} from './main-menu/nav-item';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-  title = 'easy-calculator-angular';
+  title = 'easy-calculator-angular'; 
 }
