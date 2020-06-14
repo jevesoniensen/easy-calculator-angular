@@ -5,8 +5,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TableAccountEntriesComponent } from './table-account-entries/table-account-entries.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SettingsMenuComponent } from './settings-menu/settings-menu.component';
+import { TopMenuComponent } from './top-menu/top-menu.component';
 
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table'
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
@@ -37,6 +40,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { DataLoaderComponent } from './data-loader/data-loader.component';
 
 /**
  * NgModule that includes all Material modules that are required.
@@ -81,7 +85,10 @@ export class MaterialModule { }
 @NgModule({
   declarations: [
     AppComponent,
-    TableAccountEntriesComponent
+    TableAccountEntriesComponent,
+    SettingsMenuComponent,
+    TopMenuComponent,
+    DataLoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -89,6 +96,10 @@ export class MaterialModule { }
     HttpClientModule,
     MatTableModule,
     MatMenuModule,
+    MatCardModule,
+    MatIconModule,
+    MatButtonModule,
+    MatSidenavModule,
     FlexLayoutModule,
     BrowserAnimationsModule
   ],

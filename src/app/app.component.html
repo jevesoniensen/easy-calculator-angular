@@ -1,9 +1,22 @@
+<div class="basic-container" style="text-align: center;">
+    <mat-toolbar color="primary">
+        <h1 class="text-center">Account Entries</h1>
+    </mat-toolbar>
+</div>
 <div class="basic-container">
-  <mat-toolbar color="primary">
-    <h1 class="text-center">Account Entries</h1>
-  </mat-toolbar>
+    <app-settings-menu></app-settings-menu>
 </div>
-<div class="app-component">
-  <app-table-account-entries></app-table-account-entries>
-</div>
-
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+        <app-top-menu></app-top-menu>
+    </mat-drawer>
+    <mat-drawer-content>
+        <app-table-account-entries></app-table-account-entries>
+    </mat-drawer-content>
+</mat-drawer-container>
+<mat-divider></mat-divider>
+<section>
+    <div class="button-row">
+        <app-data-loader> </app-data-loader>
+    </div>
+</section>
